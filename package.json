@@ -1,17 +1,17 @@
 {
-  "name": "boilerplate-back-end",
+  "name": "petwitter-api",
   "version": "1.0.0",
   "main": "src/index.js",
-  "repository": "git@github.com:OtterwiseCo/boilerplate-back-end.git",
-  "author": "João Pedro Bretanha <joaopedro@nave.rs>",
+  "repository": "git@github.com:PauloHFS/petwitter-api.git",
+  "author": "Paulo Hernane Fontes e Silva <paulohernane10@gmail.com>",
   "license": "MIT",
   "type": "module",
   "prisma": {
     "seed": "node prisma/seed.js"
   },
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
     "db:push": "npx prisma db push",
     "db:seed": "npx prisma db seed",
     "db:migrate-dev": "npx prisma migrate dev --name",

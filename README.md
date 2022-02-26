@@ -1,4 +1,34 @@
-# Boilerplate de back-end da Otterwise
+# petwitter-api
+
+## Primeiros passos
+
+1. Copie a .env-example e renomeie pra .env
+2. Altere as os campos com < > no .env
+3. Execute os comando abaixo:
+
+```bash
+# Rodar o container do postgres
+$ docker-compose up
+
+# Instale as dependencias
+$ yarn
+# npm install
+
+# Criar o database
+$ docker exec -it database /usr/bin/createdb <dbname>
+
+# Carregar os models do prisma
+$ yarn db:push 
+# npm run db:push
+
+# Semear o banco
+$ yarn db:seed 
+# npm run db:seed 
+
+# Iniciar o server de desenvolvimento
+$ yarn dev 
+# npm run dev
+```
 
 ## Tecnologias
 
