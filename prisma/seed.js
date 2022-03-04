@@ -11,6 +11,14 @@ const userData = [
 
 async function main() {
   console.log(`Start seeding ...`);
+  let users = await prisma.user.findMany({
+    select: { email: true },
+  });
+  if (!!users.length) {
+    console.log(`Nothing to do here`);
+    return;
+  }
+
   for (const u of userData) {
     const hashedPassword = await hashPassword(u.password);
     const userData = { ...u, password: hashedPassword };

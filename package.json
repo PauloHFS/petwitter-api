@@ -10,7 +10,7 @@
     "seed": "node prisma/seed.js"
   },
   "scripts": {
-    "start": "node src/index.js",
+    "start": "npx prisma migrate deploy && npx prisma db seed && node src/index.js",
     "dev": "nodemon src/index.js",
     "db:push": "npx prisma db push",
     "db:seed": "npx prisma db seed",

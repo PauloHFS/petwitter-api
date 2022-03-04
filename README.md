@@ -8,7 +8,7 @@
 
 ```bash
 # Rodar o container do postgres
-$ docker-compose up
+$ docker compose up
 
 # Instale as dependencias
 $ yarn

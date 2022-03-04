@@ -1,6 +1,8 @@
 import app from "./config/server.js";
 
-app.listen(3000, (err) => {
+import { envs } from "./helpers/utils.js";
+
+app.listen(envs.PORT, "0.0.0.0", (err) => {
   if (err) {
     console.error(err);
     process.exit(1);
