@@ -35,7 +35,14 @@ export const index = async (req, reply) => {
         createAt: "desc",
       },
     });
-    reply.status(200).send(posts);
+
+    const total = await prisma.post.count({
+      where,
+    });
+
+    const totalPages = Math.ceil(total / page_size);
+
+    reply.status(200).send({ posts, totalPages });
   } catch (error) {
     console.error(error);
     reply.status(500).send(error);
