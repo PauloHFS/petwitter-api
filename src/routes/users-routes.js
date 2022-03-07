@@ -8,4 +8,10 @@ export default {
     preHandler: [validateRequest],
     handler: UserController.index,
   },
+  getUserById: {
+    method: "GET",
+    url: "/users/:id",
+    preHandler: [validateRequest],
+    handler: UserController.getUser,
+  },
 };
